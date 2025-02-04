@@ -60,16 +60,4 @@ def contact_support(message):
     )
     bot.send_message(message.chat.id, support_info)
 
-# اجرای ربات
-bot.polling(none_stop=True)
 
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "Bot is running!"
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10000)
